@@ -1,0 +1,1 @@
+Karkkivarasto-tehtävää varten toteutettu hajatustaulu.
