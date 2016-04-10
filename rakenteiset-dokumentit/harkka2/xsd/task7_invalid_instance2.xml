@@ -1,0 +1,18 @@
+<gameLevel 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="green_genes.xsd">
+<!-- levelInfo element is missing the name attribute.-->
+	<levelInfo number="10"/>
+	<gameObjects>
+	  <vegetables>
+	  	<vegetable points="7">cucumber</vegetable>
+	  </vegetables>
+	  <nonVegetables>
+	  	<nonVegetable damage="5">prune</nonVegetable>
+	  	<nonVegetable damage="8" description="Rock's are hard.">rock</nonVegetable>
+	  </nonVegetables>
+	  <enemies>
+	  	<enemy health="200" level="15">Suzy Creamcheese</enemy>
+	  </enemies>
+	</gameObjects> 
+</gameLevel>

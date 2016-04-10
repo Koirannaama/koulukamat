@@ -1,0 +1,18 @@
+<!DOCTYPE gameObjects SYSTEM "green_genes.dtd">
+<gameLevel>
+	<levelInfo name="Joe's Garage" number="10"/>
+	<gameObjects>
+	  <vegetables>
+	  	<vegetable points="10" >cabbage</vegetable>
+	  	<vegetable points="2" description="It comes from a pine tree!">pineapple</vegetable>
+	  	<vegetable points="7">carrot</vegetable>
+	  </vegetables>
+	  <enemies>
+	  	<enemy health="200" level="15">Captain Redbeard</enemy>
+	  </enemies>
+	  <!-- nonVegetables are missing, that's why this is invalid.-->
+	  <powerUps>
+	  	<powerUp effect="jumpHeight" duration="10">Magic shoe</powerUp>
+	  </powerUps>
+	</gameObjects> 
+</gameLevel>

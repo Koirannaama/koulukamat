@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<gameLevel 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="green_genes.xsd">
+   	<levelInfo name="Level 4" number ="4"></levelInfo>
+   	<gameObjects>
+  		<vegetables>
+  			<vegetable points="1">cabbage</vegetable>
+  		</vegetables>
+  		<nonVegetables>
+  			<nonVegetable damage="1">prune</nonVegetable>
+  		</nonVegetables>
+  		<enemies>
+  			<enemy level="10" health="100">Captain Redbeard</enemy>
+  		</enemies>
+   	</gameObjects>
+</gameLevel>

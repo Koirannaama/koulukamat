@@ -1,0 +1,68 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- The complex type gameObjects contains the game object categories (vegetables and so on.) -->
+	<xsd:complexType name="gameObjects">
+  	<xsd:sequence>
+  		<xsd:element name="vegetables" type="vegetables" minOccurs="1"/>
+  		<xsd:element name="nonVegetables" type="nonVegetables" minOccurs="1"/>
+  		<xsd:element name="enemies" type="enemies" minOccurs="1"/>
+  		<xsd:element name="powerUps" type="powerUps" minOccurs="0"/>
+  	</xsd:sequence>
+  </xsd:complexType>
+  
+  <!-- Each game object category has a related complex type containing the relevant game object elements. -->
+  <xsd:complexType name="vegetables">
+  	<xsd:sequence>
+  		<xsd:element name="vegetable" type="vegetable" minOccurs="1" maxOccurs="unbounded"/>
+  	</xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="nonVegetables">
+  	<xsd:sequence>
+  		<xsd:element name="nonVegetable" type="nonVegetable"  minOccurs="1" maxOccurs="unbounded"/>
+  	</xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="enemies">
+  	<xsd:sequence>
+  		<xsd:element name="enemy" type="enemy" minOccurs="1" maxOccurs="unbounded"/>
+  	</xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="powerUps">
+  	<xsd:sequence>
+  		<xsd:element name="powerUp" type="powerUp" minOccurs="0"  maxOccurs="unbounded"/>
+  	</xsd:sequence>
+  </xsd:complexType>
+  
+  <!-- The complex types for the individual game objects are here. -->
+  <xsd:complexType name="vegetable" mixed="true">
+  	<xsd:attribute name="points" type="xsd:integer"/>
+  	<xsd:attribute name="description" type="xsd:string" use="optional"/>
+  </xsd:complexType>
+  
+  <xsd:complexType name="nonVegetable" mixed="true">
+  	<xsd:attribute name="damage" type="xsd:integer"/>
+  	<xsd:attribute name="description" type="xsd:string" use="optional"/>
+  </xsd:complexType>
+  
+  <xsd:complexType name="enemy" mixed="true">
+  	<xsd:attribute name="level" type="xsd:integer"/>
+  	<xsd:attribute name="health" type="xsd:integer" />
+  </xsd:complexType>
+  
+  <xsd:complexType name="powerUp" mixed="true">
+  	<xsd:attribute name="effect" type="effect"/>
+  	<xsd:attribute name="duration" type="xsd:integer" />
+  </xsd:complexType>
+  
+  <!-- The powerUp's effect attribute is an enumerated type which is defined here. -->
+  	<xsd:simpleType name="effect" final="restriction">
+  		<xsd:restriction base="xsd:string">
+  			<xsd:enumeration value="jumpHeight"/>
+  			<xsd:enumeration value="speed"/>
+  			<xsd:enumeration value="damage"/>
+  		</xsd:restriction>
+  	</xsd:simpleType>
+  	
+</xsd:schema>

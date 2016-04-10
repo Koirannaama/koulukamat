@@ -1,0 +1,8 @@
+<!-- This is the driver. It contains the root element gameLevel and the child element levelInfo. -->
+<!ELEMENT gameLevel (levelInfo, gameObjects)>
+<!ELEMENT levelInfo (#PCDATA)>
+<!ATTLIST levelInfo number CDATA #REQUIRED>
+<!ATTLIST levelInfo name CDATA #REQUIRED>
+<!-- The actual game objects are in the module file categories.mod which referenced here. -->
+<!ENTITY % objectCategories SYSTEM "categories.mod">
+%objectCategories;

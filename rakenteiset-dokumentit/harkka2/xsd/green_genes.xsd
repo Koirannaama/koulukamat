@@ -1,0 +1,19 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:include schemaLocation="categories.xsd"/>
+  
+  <xsd:element name="gameLevel" type="gameLevel"/>
+
+  <xsd:complexType name="gameLevel">
+    <xsd:sequence>
+      <xsd:element name="levelInfo" type="levelInfo"/>
+      <xsd:element name="gameObjects" type="gameObjects"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="levelInfo">
+  	<xsd:attribute name="name" type="xsd:string" use="required"/>
+  	<xsd:attribute name="number" type="xsd:integer" use="required"/>
+  </xsd:complexType>
+
+</xsd:schema>
