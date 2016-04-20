@@ -1,0 +1,1 @@
+Viikkoharkkoihin tehty pelidemo. Tarkoitus oli tutustua pelien tekemiseen tarkoitettuun ohjelmistokehykseen, t‰ss‰ k‰ytetty CraftyJS:‰‰.
